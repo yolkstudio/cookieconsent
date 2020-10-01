@@ -1,4 +1,4 @@
-# Cookie Consent
+# Cookie Consent v1.0
 Simple cross-browser cookie consent plugin written in plain javascript.
 
 ## Why though
@@ -15,10 +15,12 @@ Main features
 ## CDN
 ```
 // dist version (no verbose mode)
-https://cdn.jsdelivr.net/gh/orestbida/cookieconsent/dist/cookieconsent.js
+https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@1.0/dist/cookieconsent.js
+https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@1.0/dist/cookieconsent.css
 
 // src version (with verbose mode)
-https://cdn.jsdelivr.net/gh/orestbida/cookieconsent/src/cookieconsent.js
+https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@1.0/src/cookieconsent.js
+https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@1.0/src/cookieconsent.css
 ```
 
 ## How to run
@@ -28,7 +30,7 @@ https://cdn.jsdelivr.net/gh/orestbida/cookieconsent/src/cookieconsent.js
     <script src="<your_path>/cookieconsent.js"></script>
 
     // or load it via cdn
-    <script src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent/dist/cookieconsent.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@1.0/dist/cookieconsent.js"></script>
     ```
 - __Obtain Cookie-Consent plugin__ 
     ```javascript
