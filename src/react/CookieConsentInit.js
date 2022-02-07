@@ -1,5 +1,11 @@
-function CookieConsentInit() {
-  const callCC = () => {
+function CookieConsentInit(onAcceptParams) {
+
+  onAcceptParams = onAcceptParams || null;
+
+  const callCC = (onAcceptParams) => {
+
+    onAcceptParams = onAcceptParams || null;
+
     var cc;
     try {
       cc = window.initCookieConsent();
@@ -34,7 +40,7 @@ function CookieConsentInit() {
         },
 
         onAccept: function (cookie) {
-          // ...
+          onAcceptParams.call();
         },
 
         onChange: function (cookie, changed_preferences) {
@@ -146,7 +152,7 @@ function CookieConsentInit() {
   document.head.appendChild(CSSLink);
 
   const timer = setTimeout(() => {
-    callCC();
+    callCC(onAcceptParams);
   }, 1000);
 }
 
