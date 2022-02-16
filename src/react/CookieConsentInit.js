@@ -1,10 +1,11 @@
-function CookieConsentInit(locales) {
+function CookieConsentInit(locales, cssPath) {
 
   locales = locales || null;
+  cssPath = cssPath || '';
 
-  const callCC = (locales) => {
+  const callCC = (locales, cssPath) => {
 
-    locales = locales || null;
+    cssPath = cssPath || '';
 
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -19,7 +20,7 @@ function CookieConsentInit(locales) {
       cc.run({
         current_lang: "cs",
         autoclear_cookies: true, // default: false
-        theme_css: '', // 🚨 replace with a valid path
+        theme_css: cssPath, // 🚨 replace with a valid path
         page_scripts: true, // default: false
 
         // mode: 'opt-in'                          // default: 'opt-in'; value: 'opt-in' or 'opt-out'
@@ -106,7 +107,7 @@ function CookieConsentInit(locales) {
   document.head.appendChild(CSSLink);
 
   const timer = setTimeout(() => {
-    callCC(locales);
+    callCC(locales, cssPath);
   }, 1000);
 }
 
