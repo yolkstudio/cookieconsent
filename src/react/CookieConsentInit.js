@@ -58,12 +58,12 @@ function CookieConsentInit(locales, cssPath) {
             gtag("consent", "update", {
               ad_storage: "granted",
             });
-            dataLayer.push({ fb_pixel_consent: true });
+            dataLayer.push({ 'fb_pixel_consent': true });
           } else {
             gtag("consent", "update", {
               ad_storage: "denied",
             });
-            dataLayer.push({ fb_pixel_consent: false });
+            dataLayer.push({ 'fb_pixel_consent': false });
           }
         },
 
@@ -82,12 +82,12 @@ function CookieConsentInit(locales, cssPath) {
             gtag("consent", "update", {
               ad_storage: "granted",
             });
-            dataLayer.push({ fb_pixel_consent: true });
+            dataLayer.push({ 'fb_pixel_consent': true });
           } else {
             gtag("consent", "update", {
               ad_storage: "denied",
             });
-            dataLayer.push({ fb_pixel_consent: false });
+            dataLayer.push({ 'fb_pixel_consent': false });
           }
         },
 
