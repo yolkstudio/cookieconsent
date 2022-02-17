@@ -1,14 +1,14 @@
 function CookieConsentInit(locales, cssPath) {
-
   locales = locales || null;
-  cssPath = cssPath || '';
+  cssPath = cssPath || "";
 
   const callCC = (locales, cssPath) => {
-
-    cssPath = cssPath || '';
+    cssPath = cssPath || "";
 
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() {
+      dataLayer.push(arguments);
+    }
 
     var cc;
     try {
@@ -44,46 +44,50 @@ function CookieConsentInit(locales, cssPath) {
         },
 
         onAccept: function (cookie) {
-          if(cc.allowedCategory('analytics')){
-            gtag('consent', 'update', {
-                'analytics_storage': 'granted'
+          if (cc.allowedCategory("analytics")) {
+            gtag("consent", "update", {
+              analytics_storage: "granted",
             });
           } else {
-            gtag('consent', 'update', {
-              'analytics_storage': 'denied'
+            gtag("consent", "update", {
+              analytics_storage: "denied",
             });
           }
-        
-          if(cc.allowedCategory('targeting')){
-            gtag('consent', 'update', {
-                'ad_storage': 'granted'
+
+          if (cc.allowedCategory("targeting")) {
+            gtag("consent", "update", {
+              ad_storage: "granted",
             });
+            dataLayer.push({ fb_pixel_consent: true });
           } else {
-            gtag('consent', 'update', {
-              'ad_storage': 'denied'
+            gtag("consent", "update", {
+              ad_storage: "denied",
             });
+            dataLayer.push({ fb_pixel_consent: false });
           }
         },
 
         onChange: function (cookie, changed_preferences) {
-          if(cc.allowedCategory('analytics')){
-            gtag('consent', 'update', {
-                'analytics_storage': 'granted'
+          if (cc.allowedCategory("analytics")) {
+            gtag("consent", "update", {
+              analytics_storage: "granted",
             });
           } else {
-            gtag('consent', 'update', {
-              'analytics_storage': 'denied'
+            gtag("consent", "update", {
+              analytics_storage: "denied",
             });
           }
-        
-          if(cc.allowedCategory('targeting')){
-            gtag('consent', 'update', {
-                'ad_storage': 'granted'
+
+          if (cc.allowedCategory("targeting")) {
+            gtag("consent", "update", {
+              ad_storage: "granted",
             });
+            dataLayer.push({ fb_pixel_consent: true });
           } else {
-            gtag('consent', 'update', {
-              'ad_storage': 'denied'
+            gtag("consent", "update", {
+              ad_storage: "denied",
             });
+            dataLayer.push({ fb_pixel_consent: false });
           }
         },
 
@@ -97,13 +101,13 @@ function CookieConsentInit(locales, cssPath) {
   const JSScript = document.createElement("script");
   JSScript.src =
     "https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@latest/dist/cookieconsent.js";
-    JSScript.type = "application/javascript";
+  JSScript.type = "application/javascript";
   document.body.appendChild(JSScript);
 
   const CSSLink = document.createElement("link");
   CSSLink.href =
     "https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@latest/dist/cookieconsent.css";
-    CSSLink.rel = "stylesheet";
+  CSSLink.rel = "stylesheet";
   document.head.appendChild(CSSLink);
 
   const timer = setTimeout(() => {
