@@ -65,6 +65,7 @@ function CookieConsentInit(locales, cssPath) {
             });
             dataLayer.push({ 'fb_pixel_consent': false });
           }
+          dataLayer.push({ 'event': 'cookie_consent_update' });
         },
 
         onChange: function (cookie, changed_preferences) {
@@ -89,6 +90,7 @@ function CookieConsentInit(locales, cssPath) {
             });
             dataLayer.push({ 'fb_pixel_consent': false });
           }
+          dataLayer.push({ 'event': 'cookie_consent_update' });
         },
 
         languages: {
