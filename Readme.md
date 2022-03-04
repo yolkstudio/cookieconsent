@@ -1,3 +1,17 @@
+## GTM settings
+(A) Setting the cookie consent for google tags
+    (1) go to tag settings -> advanced settings -> consent settings
+    (2) you can see "Build in Consent Checks" which is already determined by google
+    (3) in section "Additional Consent Checks" you can add more events from google predefined variables
+
+(B) Adding trigger for other then google tags
+    (1) make variable in GTM depending on data layer variable (v1) called targeting_consent
+    (2) add new trigger or update existing one with any trigger type and with the condition the trigger fires when the variable from step (1) equals true
+    (3) add the trigger to what ever tag you need
+
+## Project settings
+
+
 <h1 align="center" style="text-align: center;">Cookie Consent</h1>
 <div align="center" style="text-align: center;">
 
