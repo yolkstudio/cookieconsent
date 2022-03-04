@@ -1,0 +1,20 @@
+{
+  "name": "cookieconsent",
+  "version": "1.0.0",
+  "description": "(A) Setting the cookie consent for google tags\r     (1) go to tag settings -> advanced settings -> consent settings\r     (2) you can see \"Build in Consent Checks\" which is already determined by google\r     (3) in section \"Additional Consent Checks\" you can add more events from google predefined variables",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yolkstudio/cookieconsent.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yolkstudio/cookieconsent/issues"
+  },
+  "homepage": "https://github.com/yolkstudio/cookieconsent#readme"
+}
