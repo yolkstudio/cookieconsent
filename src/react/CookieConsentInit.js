@@ -106,13 +106,13 @@ function CookieConsentInit(locales, cssPath) {
 
   const JSScript = document.createElement("script");
   JSScript.src =
-    "https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@latest/dist/cookieconsent.js";
+    "https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v2.8.0/dist/cookieconsent.js";
   JSScript.type = "application/javascript";
   document.body.appendChild(JSScript);
 
   const CSSLink = document.createElement("link");
   CSSLink.href =
-    "https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@latest/dist/cookieconsent.css";
+    "https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v2.8.0/dist/cookieconsent.css";
   CSSLink.rel = "stylesheet";
   document.head.appendChild(CSSLink);
 
