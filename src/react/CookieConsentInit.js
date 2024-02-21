@@ -44,57 +44,107 @@ function CookieConsentInit(locales, cssPath) {
         },
 
         onAccept: function (cookie) {
-          if (cc.allowedCategory("analytics")) {
-            gtag("consent", "update", {
-              analytics_storage: "granted",
-            });
-            dataLayer.push({ 'analytics_consent': true });
-          } else {
-            gtag("consent", "update", {
-              analytics_storage: "denied",
-            });
-            dataLayer.push({ 'analytics_consent': false });
-          }
-
-          if (cc.allowedCategory("targeting")) {
+          if (cc.allowedCategory("ad_storage")) {
             gtag("consent", "update", {
               ad_storage: "granted",
             });
-            dataLayer.push({ 'targeting_consent': true });
+            dataLayer.push({ ad_storage: true });
           } else {
             gtag("consent", "update", {
               ad_storage: "denied",
             });
-            dataLayer.push({ 'targeting_consent': false });
+            dataLayer.push({ ad_storage: false });
           }
-          dataLayer.push({ 'event': 'cookie_consent_update' });
+          dataLayer.push({ event: "cookie_consent_update" });
+
+          if (cc.allowedCategory("ad_user_data")) {
+            gtag("consent", "update", {
+              ad_user_data: "granted",
+            });
+            dataLayer.push({ ad_user_data: true });
+          } else {
+            gtag("consent", "update", {
+              ad_user_data: "denied",
+            });
+            dataLayer.push({ ad_user_data: false });
+          }
+
+          if (cc.allowedCategory("ad_personalization")) {
+            gtag("consent", "update", {
+              ad_personalization: "granted",
+            });
+            dataLayer.push({ ad_personalization: true });
+          } else {
+            gtag("consent", "update", {
+              ad_personalization: "denied",
+            });
+            dataLayer.push({ ad_personalization: false });
+          }
+
+          if (cc.allowedCategory("analytics_storage")) {
+            gtag("consent", "update", {
+              analytics_storage: "granted",
+            });
+            dataLayer.push({ analytics_storage: true });
+          } else {
+            gtag("consent", "update", {
+              analytics_storage: "denied",
+            });
+            dataLayer.push({ analytics_storage: false });
+          }
+          dataLayer.push({ event: "cookie_consent_update" });
         },
 
         onChange: function (cookie, changed_preferences) {
-          if (cc.allowedCategory("analytics")) {
-            gtag("consent", "update", {
-              analytics_storage: "granted",
-            });
-            dataLayer.push({ 'analytics_consent': true });
-          } else {
-            gtag("consent", "update", {
-              analytics_storage: "denied",
-            });
-            dataLayer.push({ 'analytics_consent': false });
-          }
-
-          if (cc.allowedCategory("targeting")) {
+          if (cc.allowedCategory("ad_storage")) {
             gtag("consent", "update", {
               ad_storage: "granted",
             });
-            dataLayer.push({ 'targeting_consent': true });
+            dataLayer.push({ ad_storage: true });
           } else {
             gtag("consent", "update", {
               ad_storage: "denied",
             });
-            dataLayer.push({ 'targeting_consent': false });
+            dataLayer.push({ ad_storage: false });
           }
-          dataLayer.push({ 'event': 'cookie_consent_update' });
+          dataLayer.push({ event: "cookie_consent_update" });
+
+          if (cc.allowedCategory("ad_user_data")) {
+            gtag("consent", "update", {
+              ad_user_data: "granted",
+            });
+            dataLayer.push({ ad_user_data: true });
+          } else {
+            gtag("consent", "update", {
+              ad_user_data: "denied",
+            });
+            dataLayer.push({ ad_user_data: false });
+          }
+
+          if (cc.allowedCategory("ad_personalization")) {
+            gtag("consent", "update", {
+              ad_personalization: "granted",
+            });
+            dataLayer.push({ ad_personalization: true });
+          } else {
+            gtag("consent", "update", {
+              ad_personalization: "denied",
+            });
+            dataLayer.push({ ad_personalization: false });
+          }
+
+          if (cc.allowedCategory("analytics_storage")) {
+            gtag("consent", "update", {
+              analytics_storage: "granted",
+            });
+            dataLayer.push({ analytics_storage: true });
+          } else {
+            gtag("consent", "update", {
+              analytics_storage: "denied",
+            });
+            dataLayer.push({ analytics_storage: false });
+          }
+          dataLayer.push({ event: "cookie_consent_update" });
         },
 
         languages: {
